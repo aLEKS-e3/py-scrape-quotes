@@ -1,5 +1,4 @@
 import csv
-import os
 from typing import Callable
 from urllib.parse import urljoin
 
@@ -7,7 +6,6 @@ import httpx
 
 from bs4 import BeautifulSoup
 from dataclasses import dataclass, fields, astuple
-from dotenv import load_dotenv
 
 from app.parse_authors import (
     find_author_url,
@@ -17,9 +15,7 @@ from app.parse_authors import (
 )
 
 
-load_dotenv()
-
-BASE_URL = os.environ.get("BASE_URL")
+BASE_URL = "https://quotes.toscrape.com/"
 
 
 @dataclass
