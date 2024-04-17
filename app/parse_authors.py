@@ -34,7 +34,6 @@ def parse_single_author(author_soup: BeautifulSoup) -> Author:
 
 
 def parse_author(url: str) -> list[Author]:
-    print(cache)
     if url in cache.keys():
         return cache[url]
 
